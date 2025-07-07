@@ -1,15 +1,26 @@
 import React from 'react';
-import Users from './Users';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AddUser from './AddUser';
+import AdminDashboard from './components/AdminDashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">SkillEdge User Management</h1>
-      <AddUser />
-      <Users />
-    </div>
+    <Router>
+      <div className="container mt-5">
+        <h1 className="text-center mb-4">skilledge</h1>
+
+        <Routes>
+          <Route path="/" element={
+            <>
+              <AddUser />
+            </>
+          } />
+
+          <Route path="/admin" element={<AdminDashboard />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

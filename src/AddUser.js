@@ -48,7 +48,6 @@ function AddUser() {
   <label>Role:</label>
   <select className="form-control" value={role} onChange={(e) => setRole(e.target.value)} required>
     <option value="">Select Role</option>
-    <option value="Admin">Admin</option>
     <option value="Instructor">Instructor</option>
     <option value="Student">Student</option>
   </select>
